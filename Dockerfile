@@ -19,7 +19,11 @@ RUN apt-get -y install \
   hdf5-tools \
   libpython3-dev \
   python3-pip \
-  libtool
+  libtool \
+
+ENV \
+    CC="/usr/bin/clang" \
+    CXX="/usr/bin/clang++"
 
 RUN mkdir ~/install && \
     cd ~/install && \
@@ -31,5 +35,5 @@ RUN mkdir ~/install && \
     make install
 
 #RUN apt-get -y install libfreetype6-dev
-RUN pip3 install Cython pytest cppyy numpy matplotlib
+RUN pip3 install wheel Cython pytest cppyy numpy matplotlib
 
