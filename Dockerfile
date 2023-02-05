@@ -2,7 +2,8 @@ FROM ubuntu:18.04
 
 RUN apt-get update -y
 RUN apt-get -y install \
-  build-essential \
+  build-essential
+RUN apt-get -y install \
   gfortran \
   autoconf \
   cmake \
