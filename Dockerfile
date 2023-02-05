@@ -34,6 +34,9 @@ RUN mkdir ~/install && \
     make && \
     make install
 
-#RUN apt-get -y install libfreetype6-dev
-RUN pip3 install wheel Cython pytest cppyy numpy matplotlib
+
+RUN pip3 install Cython pytest cppyy numpy
+
+RUN apt-get -y install libfreetype6-dev
+RUN pip3 install matplotlib
 
