@@ -1,9 +1,8 @@
 FROM ubuntu:18.04
 
-RUN apt-get update -y
-RUN apt-get -y install \
-  build-essential
-RUN apt-get -y install \
+RUN apt-get update -y && \
+  apt-get -y install \
+  build-essential \
   gfortran \
   autoconf \
   cmake \
@@ -20,7 +19,7 @@ RUN apt-get -y install \
   hdf5-tools \
   libpython3-dev \
   python3-pip \
-  libtool \
+  libtool
 
 ENV \
     CC="/usr/bin/clang" \
