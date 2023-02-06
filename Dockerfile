@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:22.04
 
 RUN apt-get update -y && \
   apt-get -y install \
@@ -35,8 +35,5 @@ RUN mkdir ~/install && \
     make install
 
 
-RUN pip3 install Cython pytest cppyy numpy
-
-RUN apt-get -y install libfreetype6-dev
-RUN pip3 install matplotlib
+RUN pip3 install Cython pytest cppyy numpy matplotlib
 
