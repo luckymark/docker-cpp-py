@@ -21,8 +21,8 @@ RUN apt-get update -y && \
   hdf5-tools \
   libpython3-dev \
   python3-pip \
-  libtool && \
-  add-apt-repository ppa:deadsnakes/ppa && \
+  libtool
+RUN add-apt-repository -y ppa:deadsnakes/ppa && \
   apt-get update -y && \
   apt-get install -y python3.9
 
