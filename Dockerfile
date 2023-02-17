@@ -21,7 +21,10 @@ RUN apt-get update -y && \
   hdf5-tools \
   libpython3-dev \
   python3-pip \
-  libtool
+  libtool && \
+  add-apt-repository ppa:deadsnakes/ppa && \
+  apt-get update -y && \
+  apt-get install -y python3.9
 
 ENV \
     CC="/usr/bin/clang" \
