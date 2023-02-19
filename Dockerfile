@@ -26,6 +26,7 @@ RUN apt-get update -y && \
 RUN add-apt-repository -y ppa:deadsnakes/ppa && \
   apt-get update -y && \
   apt-get install -y python3.9
+RUN rm /usr/bin/python && ln -s /usr/bin/python3.9 /usr/bin/python
 
 ENV \
     CC="/usr/bin/clang" \
