@@ -42,5 +42,5 @@ RUN mkdir ~/install && \
     make install
 
 
-RUN pip3 install Cython pytest cppyy numpy matplotlib
+RUN pip3 install Cython pytest cppyy numpy matplotlib mpi4py
 
