@@ -27,4 +27,4 @@ jobs:
         with:
           push: true
           platforms: linux/amd64
-          tags: luckymark/docker-cpp-py:ubuntu18_04
+          tags: luckymark/docker-cpp-py:ubuntu18_04-1
