@@ -22,7 +22,8 @@ RUN apt-get update -y && \
   libpython3-dev \
   python3-pip \
   libtool \
-  software-properties-common
+  software-properties-common \
+  mpich
 RUN add-apt-repository -y ppa:deadsnakes/ppa && \
   apt-get update -y && \
   apt-get install -y python3.9
